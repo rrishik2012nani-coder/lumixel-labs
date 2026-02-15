@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lumixel Labs</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f1a;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, #ff00cc, #00f0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  text-align: center;
+  color: #aaa;
+  margin-top: -20px;
+  margin-bottom: 40px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.card {
+  background: #1a1a2e;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00f0ff20;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px #ff00cc80;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #00f0ff;
+}
+
+.card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  border: 1px solid #00f0ff;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #00f0ff;
+  transition: 0.3s;
+}
+
+.card a:hover {
+  background: #00f0ff;
+  color: black;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+  font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>🌌 LUMIXEL LABS</header>
+<div class="subtitle">Experiments. Games. AI. UI. Innovation.</div>
+
+<div class="container" id="projects"></div>
+
+<footer>© 2026 Lumixel Labs | Built by Rishik</footer>
+
+<script>
+const projects = [
+  {
+    name: "Arc Reactor UI",
+    description: "Futuristic glowing reactor animation.",
+    link: "#"
+  },
+  {
+    name: "Matrix Effect",
+    description: "Hacker style falling code screen.",
+    link: "#"
+  },
+  {
+    name: "Click Speed Test",
+    description: "Test your clicking power.",
+    link: "#"
+  }
+];
+
+// AUTO GENERATE CARDS
+const container = document.getElementById("projects");
+
+projects.forEach(project => {
+  const card = document.createElement("div");
+  card.className = "card";
+
+  card.innerHTML = `
+    <h3>${project.name}</h3>
+    <p>${project.description}</p>
+    <a href="${project.link}" target="_blank">Open Project</a>
+  `;
+
+  container.appendChild(card);
+});
+</script>
+
+</body>
+</html>
+{
+  name: "hacking.html",
+  description: "Short description",
+  link: "hacking.html"
+}
